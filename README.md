@@ -1,6 +1,6 @@
 # WebTA04 - Portafolio del Grupo 7
 
-Este proyecto es el portafolio web del **Grupo 7** del grado **ASIXc1B** **MDS** **TA04**, el cual muestra información sobre los integrantes del grupo: **Alberto**, **Oscar** e **Izan**. La página web está alojada en **GitHub Pages** y está disponible a través del dominio **[grup7.blog](http://grup7.blog)**.
+Este proyecto es el portafolio web del **Grupo 7** del grado **ASIXc1B** **MDS** **TA04**, el cual muestra información sobre los integrantes del grupo: **Alberto**, **Oscar** e **Izan**. La página web está alojada en **GitHub Pages** y está disponible a través del dominio **[grup7.cat](http://grup7.cat)**.
 
 ## Descripción
 
@@ -29,7 +29,7 @@ La estructura de archivos de este repositorio es la siguiente:
   - **`backup.yml`**: Archivo de configuración que automatiza las copias de seguridad del repositorio, asegurando que siempre haya una versión actualizada del proyecto.
 
 - **`CNAME`**:
-  - Archivo utilizado para configurar un **dominio personalizado**. En este caso, el dominio **`grup7.blog`** es el que se usa para acceder a la página web.
+  - Archivo utilizado para configurar un **dominio personalizado**. En este caso, el dominio **`grup7.cat`** es el que se usa para acceder a la página web.
 
 - **`alberto.html`**, **`izan.html`**, **`oscar.html`**:
   - Páginas HTML individuales para cada uno de los integrantes del grupo. Estas páginas contienen información sobre cada persona, sus proyectos y su trabajo.
