@@ -1,176 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Portafolio de Oscar Garcia, Administrador de Sistemas novato con proyectos en Python y redes.">
+    <meta name="keywords" content="SysAdmin, Python, Redes, Seguridad, ASIXC">
+    <meta name="author" content="Oscar Garcia">
+    <meta property="og:title" content="Oscar Garcia - SysAdmin">
+    <meta property="og:description" content="Explora mis proyectos en Python y redes, como Administrador de Sistemas en formación.">
+    <meta property="og:image" href="assets/images/logo.png">
+    <meta property="og:url" content="https://oscarportfolio.com">
+    <meta property="og:type" content="website">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oscar Garcia - Portafolio</title>
-    <link rel="stylesheet" href="src/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="src/css/styles.css" rel="stylesheet">
+    <script src="src/js/scripts.js" defer></script>
     <link rel="icon" href="assets/images/logo.png" type="image/x-icon">
 </head>
-<body>
-<header>
-    <div id="logo-container">
-        <img src="assets/images/logo.png" alt="Logo del portafolio" id="logo">
-    </div>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li>
-                <a href="assets/docs/cv.pdf" class="boton-cv" download>
-                    <button type="button" class="btn-descargar">Descargar CV</button>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
 
-<main>
-    <section id="inicio">
-        <h1 style="font-size: 2.5em;margin-bottom: -20px;">Oscar Garcia - SysAdmin</h1>
-        <div class="contenido">
-        <p style="font-size: 2em;font-family: 'Times New Roman', Times, serif;">¡Bienvenido a mi portafolio! Soy un SysAdmin novato pero con muchos proyectos interesantes en la espalda,<br>aqui podras ver algunos de mis projectos y si te interesa podriamos llegar a trabajar juntos.</p>
-            <img src="assets/images/Oscar/oscar.webp" class="imagen_oscar">
+<body class="bg-gray-100 text-gray-800">
+    <!-- Header -->
+    <header class="flex items-center justify-between p-6 bg-gray-800 text-white shadow-lg">
+        <div class="flex items-center space-x-4">
+            <img src="assets/images/logo.png" alt="Logo del portafolio" class="h-16">
+            <h1 class="text-2xl font-semibold">Oscar Garcia</h1>
         </div>
-    </section>
+        <nav class="flex items-center space-x-6">
+            <ul class="flex space-x-6">
+                <li><a href="#inicio" class="hover:text-blue-300 transition">Inicio</a></li>
+                <li><a href="#sobre-mi" class="hover:text-blue-300 transition">Sobre Mí</a></li>
+                <li><a href="#proyectos" class="hover:text-blue-300 transition">Proyectos</a></li>
+                <li><a href="#contacto" class="hover:text-blue-300 transition">Contacto</a></li>
+            </ul>
+            <a href="assets/docs/oscar_cv.pdf" download 
+               class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-500 transition">
+               Descargar CV
+            </a>
+        </nav>
+    </header>
 
-    <section id="proyectos">
-        <h2 class="titulo-proyectos">Mis Proyectos</h2>
-        <div class="proyectos-container">
-        
-            <!-- Proyecto 1 -->
-            <article class="proyecto">
-                <h3 class="titulo-proyecto">Juego Pin Pong</h3>
-                <img src="assets/images/Oscar/Pong.png" alt="Imagen del Proyecto" class="imagen-proyecto">
-                <p class="descripcion-proyecto">Pequeña recreacion del <br>classico juego</p>
-                
-                <!-- Detalles Expandidos -->
-                <div class="expandir-info">
-                    <p><strong>Fecha de inicio:</strong> 3/4/2022</p>
-                    <p><strong>Tecnologías utilizadas:</strong> VSC, python, pygame</p>
-                    <p><strong>Descripción:</strong> Recreacion del juego pong arcade hecho con python concretamente con la biblioteca pygame.</p>
-                </div>
-        
-                <!-- Botones -->
-                <div class="botones">
-                    <a href="https://github.com/OscarGarcia-ITB2425/Juego-Ping-Pong/tree/main" class="boton">Ver Proyecto</a>
-                    <button class="boton-mas" onclick="toggleInfo(this)">Más</button>
-                </div>
-            </article>
-
-            <!-- Proyecto 2 -->
-            <article class="proyecto">
-                <h3 class="titulo-proyecto">Calculadora Grafica</h3>
-                <img src="assets/images/Oscar/Calculadora_Grafica.png" alt="Imagen del Proyecto" class="imagen-proyecto">
-                <p class="descripcion-proyecto">Creacion de una calculadora <br>grafica con python</p>
-                
-                <!-- Detalles Expandidos -->
-                <div class="expandir-info">
-                    <p><strong>Fecha de inicio:</strong> 18/5/2022</p>
-                    <p><strong>Tecnologías utilizadas:</strong> VSC, python, tkinter</p>
-                    <p><strong>Descripción:</strong> Creeacion de una calculadora grafica basica a base de utilizar python junto con la biblioteca tkinter.</p>
-                </div>
-        
-                <!-- Botones -->
-                <div class="botones">
-                    <a href="https://github.com/OscarGarcia-ITB2425/Calculadora-Grafica/tree/main" class="boton">Ver Proyecto</a>
-                    <button class="boton-mas" onclick="toggleInfo(this)">Más</button>
-                </div>
-            </article>
-
-            <!-- Proyecto 3 -->
-            <article class="proyecto">
-                <h3 class="titulo-proyecto">Gestor de Tareas<br>Por terminal</h3>
-                <img src="assets/images/Oscar/Gestor_tareas.png" alt="Imagen del Proyecto" class="imagen-proyecto">
-                <p class="descripcion-proyecto">Gestor de tareas por terminal.</p>
-                
-                <!-- Detalles Expandidos -->
-                <div class="expandir-info">
-                    <p><strong>Fecha de inicio:</strong> 23/11/2024</p>
-                    <p><strong>Tecnologías utilizadas:</strong> VSC, python</p>
-                    <p><strong>Descripción:</strong> Un gestor de tareas sencillo para utilizar en la terminal de cualquier ordenador o dispositivo que tenga descargado alguna version de python superior a la 3.8</p>
-                </div>
-        
-                <!-- Botones -->
-                <div class="botones">
-                    <a href="https://github.com/OscarGarcia-ITB2425/Gestor-de-tareas/tree/main" class="boton">Ver Proyecto</a>
-                    <button class="boton-mas" onclick="toggleInfo(this)">Más</button>
-                </div>
-            </article>
-        
-        </div>
-    </section>
-    
-    <script src="src/js/proyectos.js"></script>
-    
-    <section id="contenedor-secciones" style="display: flex; justify-content: space-between; padding: 3em 2em; flex-wrap: wrap;">
-    
-        <!-- Sección "Sobre Mí" -->
-        <section id="sobre-mi" style="background-color: #fff; padding: 3em 2em; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); width: auto; margin-bottom: 2em; text-align: center; margin-left: 20%;">
-            <div id="habilidades" style="margin-bottom: 2em; ;">
-                <h2 style="font-size: 2.5rem; color: #333; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5em;margin-top: -10%;">Sobre Mí</h2>
-                <ul style="font-size: 1.2rem; color: #555; line-height: 1.8; margin-bottom: 1.5em;">
-                    <li>Rol: Administrador de sistemas en formación (SysAdmin novell).</li>
-                    <li>Liderazgo y gestión de equipos.</li>
-                    <li>Excelentes habilidades de comunicación y trato interpersonal.</li>
-                    <li>Capacidad resolutiva en situaciones de alta presión.</li>
-                    <li>Nivel B2 de inglés certificado (First Certificate).</li>
-                    <li>Conocimientos básicos de redes y protocolos como VLANs y STP.</li>
-                    <li>Proactividad para la automatización de tareas repetitivas mediante scripting (Bash, Python).</li>
-                    <li>Determinación y enfoque en la resolución de problemas técnicos.</li>
-                </ul>
+    <main class="py-8">
+        <!-- Sección Inicio -->
+        <section id="inicio" class="flex flex-col md:flex-row items-center px-6 md:px-12">
+            <div class="w-full md:w-1/2">
+                <h1 class="text-4xl font-semibold mb-4">Hola, soy Oscar Garcia</h1>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Administrador de Sistemas en formación, especializado en redes y apasionado por la programación en Python. Actualmente estudio <strong>ASIXC</strong> en el <strong>Institut Tecnologic de Barcelona</strong>.
+                </p>
+            </div>
+            <div class="w-full md:w-1/2 flex justify-center">
+                <img src="assets/images/Oscar/oscar.webp" alt="Oscar Garcia" class="w-3/4 md:w-3/5 rounded-lg shadow-xl">
             </div>
         </section>
-        
-        <!-- Sección "Contacto" -->
-        <section id="contacto" 
-                style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2em; 
-                        padding: 3em 2em; max-width: 1200px; margin: 0 auto; width: 100%; box-sizing: border-box;">
-            <!-- Formulario de Contacto -->
-            <div style="flex: 1; min-width: 300px; max-width: 48%; padding: 2em; 
-                        background-color: #f9f9f9; border-radius: 8px; 
-                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
-                <h2 style="font-size: 2rem; color: #333; margin-bottom: 1.5em;">Contacto</h2>
-                <form action="#" method="post" style="display: flex; flex-direction: column; gap: 1em;">
-                    <label for="nombre" style="font-size: 1rem; font-weight: bold;">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required 
-                        style="padding: 12px; font-size: 1rem; border-radius: 6px; border: 1px solid #ccc;">
-                
-                    <label for="email" style="font-size: 1rem; font-weight: bold;">Email:</label>
-                    <input type="email" id="email" name="email" required 
-                        style="padding: 12px; font-size: 1rem; border-radius: 6px; border: 1px solid #ccc;">
-                
-                    <label for="mensaje" style="font-size: 1rem; font-weight: bold;">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" required 
-                            style="padding: 12px; font-size: 1rem; border-radius: 6px; border: 1px solid #ccc; resize: vertical;"></textarea>
-                
-                    <button type="submit" 
-                            style="background-color: #4CAF50; color: white; padding: 12px 20px; 
-                                border-radius: 5px; font-size: 1rem; font-weight: bold; 
-                                cursor: pointer; border: none; transition: background-color 0.3s;">
-                        Enviar
-                    </button>
-                </form>
+
+        <!-- Sección Sobre Mí -->
+        <section id="sobre-mi" class="bg-white py-8 px-6 md:px-12 rounded-lg shadow-lg w-full mx-auto my-8">
+            <h2 class="text-3xl font-semibold text-center mb-4">Sobre Mí</h2>
+            <p class="text-lg text-gray-700 leading-relaxed text-center">
+                Soy un estudiante motivado, con experiencia en la creación de scripts automatizados, administración básica de servidores Linux/Windows, y conocimientos sólidos en redes. Mi objetivo es seguir aprendiendo y mejorar mis habilidades como profesional IT.
+            </p>
+        </section>
+
+        <!-- Sección Proyectos -->
+        <section id="proyectos" class="py-8 px-6 md:px-12 bg-gray-50">
+            <h2 class="text-3xl font-semibold text-center mb-6">Mis Proyectos</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Proyecto 1 -->
+                <article class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold">Juego Ping Pong</h3>
+                    <img src="assets/images/Oscar/Pong.png" alt="Ping Pong" class="w-full h-48 object-cover rounded mt-4">
+                    <p class="text-gray-600 mt-4">Un juego recreado en Python usando Pygame. Una experiencia divertida y educativa sobre programación gráfica.</p>
+                    <a href="https://github.com/OscarGarcia-ITB2425/Juego-Ping-Pong" 
+                       class="block bg-blue-600 text-white py-2 px-4 rounded mt-4 text-center hover:bg-blue-500 transition">
+                       Ver Proyecto
+                    </a>
+                </article>
+                <!-- Más Proyectos -->
             </div>
-        
-        <!-- Mapa de Ubicación -->
-        <div class="map" 
-             style="flex: 1; min-width: 300px; max-width: 48%; padding: 2em; 
-                    background-color: #f9f9f9; border-radius: 8px; 
-                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
-            <h3 style="font-size: 2rem; color: #333; margin-bottom: 1em;">Mi Ubicación</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2196.898196354529!2d9.81496070793608!3d63.26669681135466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sHoteles!5e0!3m2!1ses!2ses!4v1732566291359!5m2!1ses!2ses"  
-                    width="100%" height="300" style="border:0;" allowfullscreen="" 
-                    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
-            
-        </section>   
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto" class="py-8 px-6 md:px-12 bg-gray-100">
+            <h2 class="text-3xl font-semibold text-center mb-6">Contacto</h2>
+            <form action="#" method="post" class="space-y-4 max-w-lg mx-auto">
+                <input type="text" name="nombre" required placeholder="Tu nombre" class="w-full p-3 border rounded shadow-sm focus:ring-2 focus:ring-blue-500">
+                <input type="email" name="email" required placeholder="Tu email" class="w-full p-3 border rounded shadow-sm focus:ring-2 focus:ring-blue-500">
+                <textarea name="mensaje" required placeholder="Tu mensaje" class="w-full p-3 border rounded shadow-sm focus:ring-2 focus:ring-blue-500" rows="5"></textarea>
+                <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-500 transition">Enviar</button>
+            </form>
+        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Oscar. Todos los derechos reservados.</p>
+    <footer class="bg-gray-800 text-white py-4 text-center">
+        <p>&copy; 2024 Oscar Garcia. Todos los derechos reservados.</p>
     </footer>
-    
-    <script src="src/js/scripts.js"></script>
 </body>
+
 </html>
