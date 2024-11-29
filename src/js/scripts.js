@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             splash.classList.add("hidden");
             contenido.classList.remove("hidden");
         }, 1000); // Espera al final de la transición para ocultarlo completamente
-    }, 10000); // 10 segundos
+    }, 4000); // 4 segundos
 });
 
 // Validar email con una expresión regular y mostrar feedback visual
