@@ -4,30 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio del Grupo 7 de ASIXc1B, estudiantes de Administración de Sistemas Informáticos. Conoce nuestros proyectos y habilidades en ciberseguridad, desarrollo web, redes y más.">
-    <meta name="keywords" content="portafolio, grupo 7, ASIXc, ciberseguridad, desarrollo web, administración de sistemas, redes, proyectos tecnológicos, alumnos ASIXc">
+    <meta name="description" content="Portafolio de los estudiantes de ASIXc1B: Alberto Trujillo, Izan Fernandez y Oscar Garcia. Conoce sus proyectos en ciberseguridad, desarrollo web, administración de sistemas y redes.">
+    <meta name="keywords" content="portafolio, Alberto Trujillo, Izan Fernandez, Oscar Garcia, ASIXc, ciberseguridad, desarrollo web, administración de sistemas, redes, proyectos tecnológicos, alumnos ASIXc, programación, redes informáticas">
     <meta name="author" content="Grupo 7 ASIXc1B">
-    <meta property="og:title" content="G7 - Portafolio de Grupo 7 ASIXc">
-    <meta property="og:description" content="Conoce a los miembros del Grupo 7 de ASIXc, sus proyectos y habilidades en ciberseguridad, programación y más.">
+    <meta property="og:title" content="Portafolio del Grupo 7 ASIXc1B - Alberto Trujillo, Izan Fernandez y Oscar Garcia">
+    <meta property="og:description" content="Conoce los proyectos de los estudiantes de ASIXc1B: Alberto Trujillo, Izan Fernandez y Oscar Garcia. Descubre sus habilidades en ciberseguridad, desarrollo web, redes y administración de sistemas.">
     <meta property="og:image" content="assets/images/logo.png">
     <meta property="og:url" content="https://www.grup7.cat">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="G7 - Portafolio de Grupo 7 ASIXc">
-    <meta name="twitter:description" content="Conoce a los miembros del Grupo 7 de ASIXc y sus proyectos.">
+    <meta name="twitter:title" content="Portafolio del Grupo 7 ASIXc1B - Alberto Trujillo, Izan Fernandez y Oscar Garcia">
+    <meta name="twitter:description" content="Descubre los proyectos de los estudiantes de ASIXc1B: Alberto Trujillo, Izan Fernandez y Oscar Garcia. Conoce sus habilidades en ciberseguridad, desarrollo web y más.">
     <meta name="twitter:image" content="assets/images/logo.png">
+    <link rel="canonical" href="https://www.grup7.cat">
+    <title>Portafolio del Grupo 7 ASIXc1B - Alberto Trujillo, Izan Fernandez, Oscar Garcia</title>
 
-    <title>G7 - Portafolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="src/css/styles_def.css">
     <link rel="icon" href="assets/images/logo.png" type="image/x-icon">
+
     <script src="src/js/scripts.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 
-    <!-- Añadir Canonical URL para evitar contenido duplicado -->
-    <link rel="canonical" href="https://www.grup7.cat">
+
+    <meta name="geo.region" content="ES-B" />
+    <meta name="geo.placename" content="Barcelona" />
+    <meta name="ICBM" content="41.3851,2.1734" />
 </head>
 
+
 <body class="bg-gray-100 text-gray-800">
-    <!-- Header -->
+
     <header class="flex items-center justify-between p-6 bg-gray-800 text-white shadow-lg">
         <div id="logo-container" class="flex items-center space-x-4">
             <img src="assets/images/logo.png" alt="Logo de mi portafolio" id="logo" class="h-16">
@@ -41,15 +47,14 @@
             </ul>
         </nav>
     </header>
-    <!-- Main Section -->
+
     <main class="px-6 py-12">
             <section id="inicio" class="text-center mb-12">
                 <h1 class="text-3xl font-semibold mb-8">Bienvenido a nuestra web. Somos el Grupo 7 de ASIXc1B</h1>
         
-                <!-- Presentación de los miembros del grupo -->
+
                 <div id="miembros" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center">
         
-                    <!-- Miembro Alberto -->
                     <div class="miembro bg-white p-6 rounded-lg shadow-lg text-center transform transition-all hover:scale-105 hover:shadow-xl">
                         <img src="assets/images/Alberto/Alberto.webp" alt="Foto de Alberto" class="w-48 h-48 rounded-full object-cover mx-auto mb-4">
                         <h3 class="text-xl font-semibold text-gray-800">Alberto</h3>
@@ -59,7 +64,6 @@
                         </a>
                     </div>
         
-                    <!-- Miembro Oscar -->
                     <div class="miembro bg-white p-6 rounded-lg shadow-lg text-center transform transition-all hover:scale-105 hover:shadow-xl">
                         <img src="assets/images/Oscar/oscar.webp" alt="Foto de Oscar" class="w-48 h-48 rounded-full object-cover mx-auto mb-4">
                         <h3 class="text-xl font-semibold text-gray-800">Oscar</h3>
@@ -69,7 +73,6 @@
                         </a>
                     </div>
         
-                    <!-- Miembro Izan -->
                     <div class="miembro bg-white p-6 rounded-lg shadow-lg text-center transform transition-all hover:scale-105 hover:shadow-xl">
                         <img src="assets/images/Izan/izan.webp" alt="Foto de Izan" class="w-48 h-48 rounded-full object-cover mx-auto mb-4">
                         <h3 class="text-xl font-semibold text-gray-800">Izan</h3>
@@ -78,15 +81,12 @@
                             <button class="mt-4 px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-green-400 transition">Más Info</button>
                         </a>
                     </div>
-        
                 </div>
             </section>
         
-        <!-- Sección "Contacto" -->
         <section id="contacto" class="px-6 md:px-12 py-8 bg-gray-100">
             <h2 class="text-3xl font-semibold text-center text-gray-800 mb-6">Contacto</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Formulario de contacto (izquierda) -->
                 <form action="#" method="post" class="space-y-4 form-contacto">
                     <input type="text" id="nombre" name="nombre" required class="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500" placeholder="Tu nombre">
                     <input type="email" id="email" name="email" required class="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500" placeholder="Tu email">
@@ -94,7 +94,6 @@
                     <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-500 transition">Enviar</button>
                 </form>
 
-                <!-- Mapa de ubicación (derecha) -->
                 <div class="max-w-full overflow-hidden rounded-lg shadow-lg">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.3454419298605!2d2.183715076764951!3d41.453422471291525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4bcfdad2100a9%3A0x3c4e7db0a61a83e0!2sInstitut%20Tecnol%C3%B2gic%20de%20Barcelona!5e0!3m2!1sca!2ses!4v1732865636742!5m2!1sca!2ses"
                         width="100%" 
@@ -109,7 +108,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-4 text-center">
         <p>&copy; 2024 G7. Todos los derechos reservados.</p>
         <div class="flex justify-center space-x-6 mt-4">
