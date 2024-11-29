@@ -41,3 +41,19 @@ document.addEventListener("DOMContentLoaded", async function () {
         }, 1000); // Tiempo de animación (1s)
     }, 5000); // Esperar 5 segundos
 });
+
+// Validación de Contraseña
+document.getElementById('registro-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var password = document.getElementById('password').value;
+    var passwordStrengthMessage = document.getElementById('password-strength');
+
+    var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/;
+
+    if (!regex.test(password)) {
+        passwordStrengthMessage.classList.remove('hidden');
+    } else {
+        passwordStrengthMessage.classList.add('hidden');
+        alert('Registro exitoso');
+    }
+});
