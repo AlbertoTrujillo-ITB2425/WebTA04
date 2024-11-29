@@ -8,31 +8,25 @@ document.addEventListener("DOMContentLoaded", async function () {
         const fecha = ahora.toLocaleDateString();
         const hora = ahora.toLocaleTimeString();
 
-        // Obtener IP pública del usuario
+        // Obtener IP pública del usuario con tiempo de espera
         let ipPublica = "No disponible";
-        const respuesta = await fetch('https://api.ipify.org?format=json');
-        if (respuesta.ok) {
-            const datos = await respuesta.json();
-            ipPublica = datos.ip;
-        }
 
-        // Construir el mensaje
-        const mensaje = `
-            Estás en el portafolio de Alberto.
-            📅 Fecha actual: ${fecha}
-            🕒 Hora actual: ${hora}
-            🌐 Tu IP pública es: ${ipPublica}
-        `;
+        const obtenerIP = fetch('https://api.ipify.org?format=json')
+            .then(respuesta => respuesta.json())
+            .then(datos => datos.ip)
+            .catch(() => "No disponible");
 
-        // Mostrar el mensaje en el splash
-        document.getElementById("mensaje").innerHTML = mensaje.replace(/\n/g, '<br>');
+        // Timeout de 3 segundos (puedes ajustarlo)
+        const timeout = new Promise((_, reject) => setTimeout(() => reject('Timeout'), 3000));
+
+        // Intentar obtener la IP pública o saltarse si hay error o timeout
+        ipPublica = await Promise.race([obtenerIP, timeout]);
 
     } catch (error) {
         console.error("Error al cargar la información:", error);
-        document.getElementById("mensaje").textContent = "No se pudo cargar la información.";
     }
 
-    // Ocultar el splash automáticamente después de 10 segundos
+    // Ocultar el splash automáticamente después de 2 segundos
     setTimeout(() => {
         splash.classList.add("opacity-0"); // Suavizar salida con opacidad
         setTimeout(() => {
