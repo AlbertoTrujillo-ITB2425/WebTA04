@@ -61,3 +61,12 @@ document.body.addEventListener('click', function(event) {
         // Aquí podrías enviar el log a un servidor de monitoreo o alertar a un administrador
     }
 });
+
+<script>
+if (window.console && (typeof console.log === "function")) {
+    console.log = function() {
+        // Hacer que no se ejecute ningún código al llamar a console.log
+    };
+}
+</script>
+
