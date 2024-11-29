@@ -2,39 +2,39 @@ document.addEventListener("DOMContentLoaded", async function () {
     const splash = document.getElementById("splash");
     const contenido = document.querySelector(".container");
 
+    // Obtener fecha y hora actuales
+    const ahora = new Date();
+    const fecha = ahora.toLocaleDateString();
+    const hora = ahora.toLocaleTimeString();
+
+    // Obtener IP pública
+    let ipPublica = "No disponible";
     try {
-        // Obtener fecha y hora actuales
-        const ahora = new Date();
-        const fecha = ahora.toLocaleDateString();
-        const hora = ahora.toLocaleTimeString();
-
-        // Obtener IP pública del usuario con tiempo de espera
-        let ipPublica = "No disponible";
-
-        const obtenerIP = fetch('https://api.ipify.org?format=json')
-            .then(respuesta => respuesta.json())
-            .then(datos => datos.ip)
-            .catch(() => "No disponible");
-
-        // Timeout de 3 segundos
-        const timeout = new Promise((_, reject) => setTimeout(() => reject('Timeout'), 3000));
-
-        // Intentar obtener la IP pública o saltarse si hay error o timeout
-        ipPublica = await Promise.race([obtenerIP, timeout]);
-
-        console.log(`Fecha: ${fecha}, Hora: ${hora}, IP Pública: ${ipPublica}`);
+        const respuesta = await fetch("https://api.ipify.org?format=json");
+        if (respuesta.ok) {
+            const datos = await respuesta.json();
+            ipPublica = datos.ip;
+        }
     } catch (error) {
-        console.error("Error al cargar la información:", error);
+        console.error("No se pudo obtener la IP pública:", error);
     }
 
-    // Ocultar el splash automáticamente después de 2 segundos
+    // Mostrar mensaje en el splash
+    document.getElementById("mensaje").innerHTML = `
+        Estás en el portafolio de Alberto. <br>
+        📅 Fecha actual: ${fecha} <br>
+        🕒 Hora actual: ${hora} <br>
+        🌐 Tu IP pública: ${ipPublica}
+    `;
+
+    // Ocultar el splash después de 10 segundos
     setTimeout(() => {
-        splash.classList.add("opacity-0"); // Suavizar salida con opacidad
+        splash.classList.add("opacity-0", "transition-opacity", "duration-1000");
         setTimeout(() => {
-            splash.classList.add("hidden"); // Ocultar completamente después de la animación
-            contenido.classList.remove("hidden"); // Mostrar el contenido principal
-        }, 1000); // Tiempo de animación (1s)
-    }, 2000); // Esperar 2 segundos
+            splash.classList.add("hidden");
+            contenido.classList.remove("hidden");
+        }, 1000); // Espera al final de la transición para ocultarlo completamente
+    }, 10000); // 10 segundos
 });
 
 // Validar email con una expresión regular y mostrar feedback visual
