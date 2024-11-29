@@ -56,11 +56,10 @@ document.body.addEventListener('click', function(event) {
     }
 });
 
-<script>
 if (window.console && (typeof console.log === "function")) {
     console.log = function() {
         // Hacer que no se ejecute ningún código al llamar a console.log
     };
 }
-</script>
+
 
