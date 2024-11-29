@@ -42,18 +42,10 @@ document.addEventListener("DOMContentLoaded", async function () {
     }, 5000); // Esperar 5 segundos
 });
 
-// Validación de Contraseña
-document.getElementById('registro-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    var password = document.getElementById('password').value;
-    var passwordStrengthMessage = document.getElementById('password-strength');
-
-    var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/;
-
-    if (!regex.test(password)) {
-        passwordStrengthMessage.classList.remove('hidden');
-    } else {
-        passwordStrengthMessage.classList.add('hidden');
-        alert('Registro exitoso');
+// Monitorear eventos sospechosos de clic en el DOM
+document.body.addEventListener('click', function(event) {
+    if (event.target.id === 'login-button') {
+        console.log('Intento de inicio de sesión registrado');
+        // Aquí podrías enviar el log a un servidor de monitoreo o alertar a un administrador
     }
 });
