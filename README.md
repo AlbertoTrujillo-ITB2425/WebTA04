@@ -42,7 +42,7 @@ La estructura de archivos de este repositorio es la siguiente:
 
 ## Dominio Personalizado
 
-Este sitio está configurado con un **dominio personalizado**: **[grup7.blog](http://grup7.blog)**. Si deseas visitar el portafolio del grupo, puedes hacerlo directamente desde esta URL.
+Este sitio está configurado con un **dominio personalizado**: **[grup7.cat](http://grup7.cat)**. Si deseas visitar el portafolio del grupo, puedes hacerlo directamente desde esta URL.
 
 Para configurar el dominio en GitHub Pages, hemos utilizado el archivo **`CNAME`**, que contiene el nombre del dominio **`grup7.blog`**. Asegúrate de que el dominio esté correctamente configurado en tu proveedor de DNS para que apunte a GitHub Pages.
 
