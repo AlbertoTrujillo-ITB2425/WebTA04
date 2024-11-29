@@ -38,8 +38,8 @@ document.addEventListener("DOMContentLoaded", async function () {
         setTimeout(() => {
             splash.classList.add("hidden"); // Ocultar completamente después de la animación
             contenido.classList.remove("hidden"); // Mostrar el contenido principal
-        }, 100); // Tiempo de animación (1s)
-    }, 500); // Esperar 5 segundos
+        }, 1000); // Tiempo de animación (1s)
+    }, 2000); // Esperar 2 segundos
 });
 
 
