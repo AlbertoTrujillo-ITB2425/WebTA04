@@ -42,3 +42,28 @@ document.addEventListener('keydown', function (e) {
 document.addEventListener('contextmenu', function (e) {
     alert('Estas clicando el clic derecho.'); // Mensaje de advertencia
 });
+
+// Formulario de Contacto guarda un excel con los datos introduccidos 
+document.querySelector('.form-contacto').addEventListener('submit', function (event) {
+    event.preventDefault(); // Evitar que el formulari s'enviï
+  
+    // Capturar valors dels camps del formulari
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email').value;
+    const mensaje = document.getElementById('mensaje').value;
+  
+    // Crear un objecte de dades
+    const data = [
+      ['Nombre', 'Email', 'Mensaje'], // Capçaleres
+      [nombre, email, mensaje],       // Contingut
+    ];
+  
+    // Crear un llibre de treball Excel
+    const worksheet = XLSX.utils.aoa_to_sheet(data); // Converteix dades a full Excel
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Contactos'); // Afegir el full al llibre
+  
+    // Descarregar el fitxer Excel
+    XLSX.writeFile(workbook, 'contactos.xlsx');
+  });
+  
