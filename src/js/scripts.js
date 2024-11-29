@@ -32,9 +32,12 @@ document.addEventListener("DOMContentLoaded", async function () {
         document.getElementById("mensaje").textContent = "No se pudo cargar la información.";
     }
 
-    // Ocultar el splash después de 10 segundos
+    // Ocultar el splash automáticamente después de 10 segundos
     setTimeout(() => {
-        splash.classList.add("hidden"); // Ocultar el splash
-        contenido.classList.remove("hidden"); // Mostrar el contenido de la página
-    }, 10000); // 10 segundos
+        splash.classList.add("opacity-0"); // Suavizar salida con opacidad
+        setTimeout(() => {
+            splash.classList.add("hidden"); // Ocultar completamente después de la animación
+            contenido.classList.remove("hidden"); // Mostrar el contenido principal
+        }, 1000); // Tiempo de animación (1s)
+    }, 10000); // Esperar 10 segundos
 });
