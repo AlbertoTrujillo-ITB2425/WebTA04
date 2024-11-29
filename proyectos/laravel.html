@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Proyecto de integración de base de datos con videos en una web mediante Laravel y SQL.">
+    <meta name="keywords" content="Laravel, Base de Datos, SQL, Integración, Videos, Desarrollo Web, PHP">
+    <meta name="author" content="Alberto Trujillo">
+    <meta property="og:title" content="Integración de Videos en Web con Laravel">
+    <meta property="og:description" content="Este proyecto consiste en integrar una base de datos con videos en una web utilizando Laravel y SQL.">
+    <meta property="og:image" href="assets/images/logo.png">
+    <meta property="og:url" content="https://grup7.blog">
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Laravel</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="src/css/styles_def.css" rel="stylesheet">
+    <script src="src/js/scripts.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <link rel="icon" href="assets/images/logo.png" type="image/x-icon">
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="flex items-center justify-between p-6 bg-gray-800 text-white shadow-lg">
+        <div id="logo-container" class="flex items-center space-x-4">
+            <img src="../assets/images/logo.png" alt="Logo Proyecto Laravel" id="logo" class="h-16">
+            <h1 class="text-2xl font-semibold">Pagina de Reportes de Iracing open source</h1>
+        </div>
+        <nav class="flex items-center space-x-6">
+            <ul class="flex space-x-6">
+                <li><a href="../alberto.html" class="hover:text-blue-300 transition">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="py-8">
+        <!-- Sección "Integración de Videos" -->
+        <section id="video-integration" class="px-6 md:px-12 py-8 bg-white shadow-lg rounded-lg mx-auto mb-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-semibold text-gray-800 mb-4">Integración de Videos con Laravel y SQL</h2>
+                <p class="text-lg text-gray-700 mb-6">
+                    Este proyecto internacional se centra en integrar una base de datos con videos a una página web utilizando Laravel y SQL. El objetivo es permitir a los usuarios ver videos en línea almacenados en una base de datos, con funcionalidades de búsqueda, filtrado y carga de nuevos videos.
+                </p>
+                <img src="../assets/images/Alberto/Laravel.svg.png" alt="Integración de Videos" class="w-3/4 md:w-2/3 mx-auto mb-6 rounded-lg shadow-lg">
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    El sistema se comunica con una base de datos MySQL, donde los videos y sus metadatos son almacenados y gestionados. Se emplearon funciones de Laravel como Eloquent ORM para interactuar con la base de datos y gestionar eficientemente los datos de los videos.
+                </p>
+                <p class="text-lg text-gray-700 mb-6">
+                    El proyecto se lleva a cabo de manera remota, trabajando desde España para un equipo en Costa Rica. Esto ha permitido un enfoque internacional y flexible en el desarrollo y la integración de las tecnologías.
+                </p>
+                <a href="https://github.com/AlbertoTrujillo1/MTM" class="inline-block bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-500 transition">Ver Proyecto en GitHub</a>
+            </div>
+        </section>
+
+        <!-- Estructura del Proyecto -->
+        <section id="project-structure" class="px-6 md:px-12 py-8 bg-white shadow-lg rounded-lg mx-auto mb-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-semibold text-gray-800 mb-4">Estructura del Proyecto</h2>
+                <p class="text-lg text-gray-700 mb-6">
+                    La estructura del proyecto se divide en varios componentes esenciales para garantizar un flujo de trabajo eficiente:
+                </p>
+                <ul class="list-disc text-lg text-gray-700 mx-auto mb-6 max-w-3xl">
+                    <li><strong>Controladores:</strong> Encargados de la lógica de negocio, gestionando las solicitudes y respuestas entre la base de datos y la interfaz de usuario.</li>
+                    <li><strong>Modelos:</strong> Definen las relaciones entre las tablas de la base de datos y proporcionan métodos para interactuar con los datos.</li>
+                    <li><strong>Vistas:</strong> Las interfaces de usuario, construidas con Blade, permiten la visualización de los videos y sus detalles.</li>
+                    <li><strong>Rutas:</strong> Definen las URLs a las que se puede acceder y los controladores que las gestionan.</li>
+                </ul>
+           
