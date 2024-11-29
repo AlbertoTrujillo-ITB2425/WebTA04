@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         // Intentar obtener la IP pública o saltarse si hay error o timeout
         ipPublica = await Promise.race([obtenerIP, timeout]);
 
+        console.log(`Fecha: ${fecha}, Hora: ${hora}, IP Pública: ${ipPublica}`);
     } catch (error) {
         console.error("Error al cargar la información:", error);
     }
@@ -36,17 +37,21 @@ document.addEventListener("DOMContentLoaded", async function () {
     }, 2000); // Esperar 2 segundos
 });
 
-
-// Validar email con una expresión regular
+// Validar email con una expresión regular y mostrar feedback visual
 document.getElementById('email').addEventListener('input', function() {
     var email = this.value;
     var emailValid = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
+    var feedback = document.getElementById('email-feedback');
+    
     if (!emailValid.test(email)) {
-        alert('Correo electrónico inválido');
+        feedback.textContent = 'Correo electrónico inválido';
+        feedback.style.color = 'red';
+    } else {
+        feedback.textContent = 'Correo electrónico válido';
+        feedback.style.color = 'green';
     }
 });
-
 
 // Monitorear eventos sospechosos de clic en el DOM
 document.body.addEventListener('click', function(event) {
@@ -55,11 +60,3 @@ document.body.addEventListener('click', function(event) {
         // Aquí podrías enviar el log a un servidor de monitoreo o alertar a un administrador
     }
 });
-
-if (window.console && (typeof console.log === "function")) {
-    console.log = function() {
-        // Hacer que no se ejecute ningún código al llamar a console.log
-    };
-}
-
-
