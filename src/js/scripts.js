@@ -42,6 +42,18 @@ document.addEventListener("DOMContentLoaded", async function () {
     }, 500); // Esperar 5 segundos
 });
 
+
+// Validar email con una expresión regular
+document.getElementById('email').addEventListener('input', function() {
+    var email = this.value;
+    var emailValid = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    if (!emailValid.test(email)) {
+        alert('Correo electrónico inválido');
+    }
+});
+
+
 // Monitorear eventos sospechosos de clic en el DOM
 document.body.addEventListener('click', function(event) {
     if (event.target.id === 'login-button') {
